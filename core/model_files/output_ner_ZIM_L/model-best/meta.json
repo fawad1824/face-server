@@ -1,0 +1,106 @@
+{
+  "lang":"en",
+  "name":"pipeline",
+  "version":"0.0.0",
+  "spacy_version":">=3.7.5,<3.8.0",
+  "description":"",
+  "author":"",
+  "email":"",
+  "url":"",
+  "license":"",
+  "spacy_git_version":"a6d0fc360",
+  "vectors":{
+    "width":0,
+    "vectors":0,
+    "keys":0,
+    "name":null,
+    "mode":"default"
+  },
+  "labels":{
+    "tok2vec":[
+
+    ],
+    "ner":[
+      "DATE OF BIRTH",
+      "DATE OF ISSUE",
+      "EXTRA",
+      "FIRST NAME",
+      "ID NO",
+      "ORIGIN TITLE",
+      "PLACE OF BIRTH",
+      "SEX",
+      "SURNAME",
+      "VILLAGE OF ORIGIN"
+    ]
+  },
+  "pipeline":[
+    "tok2vec",
+    "ner"
+  ],
+  "components":[
+    "tok2vec",
+    "ner"
+  ],
+  "disabled":[
+
+  ],
+  "performance":{
+    "ents_f":0.9990485252,
+    "ents_p":0.9980988593,
+    "ents_r":1.0,
+    "ents_per_type":{
+      "ID NO":{
+        "p":1.0,
+        "r":1.0,
+        "f":1.0
+      },
+      "EXTRA":{
+        "p":1.0,
+        "r":1.0,
+        "f":1.0
+      },
+      "SEX":{
+        "p":1.0,
+        "r":1.0,
+        "f":1.0
+      },
+      "SURNAME":{
+        "p":1.0,
+        "r":1.0,
+        "f":1.0
+      },
+      "FIRST NAME":{
+        "p":0.9827586207,
+        "r":1.0,
+        "f":0.9913043478
+      },
+      "DATE OF BIRTH":{
+        "p":1.0,
+        "r":1.0,
+        "f":1.0
+      },
+      "ORIGIN TITLE":{
+        "p":1.0,
+        "r":1.0,
+        "f":1.0
+      },
+      "PLACE OF BIRTH":{
+        "p":1.0,
+        "r":1.0,
+        "f":1.0
+      },
+      "DATE OF ISSUE":{
+        "p":1.0,
+        "r":1.0,
+        "f":1.0
+      },
+      "VILLAGE OF ORIGIN":{
+        "p":1.0,
+        "r":1.0,
+        "f":1.0
+      }
+    },
+    "tok2vec_loss":27.6604192252,
+    "ner_loss":64.2310367127
+  }
+}

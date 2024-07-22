@@ -1,0 +1,61 @@
+version: '3.8'
+services:
+  web:
+    build: .
+    container_name: faceapi
+    volumes:
+      - .:/usr/src/app
+      - media_volume:/var/www/media
+    ports:
+      - "8006:8006"
+    depends_on:
+      - db
+    restart: on-failure:3
+    networks:
+      - laravel_face
+  nginx:
+    image: nginx:latest
+    container_name: face_nginx
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+    ports:
+      - "8009:8009"
+    depends_on:
+      - web
+    restart: on-failure:3
+    networks:
+      - laravel_face
+  db:
+    image: postgres:latest 
+    container_name: face_db
+    restart: always
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5435:5432"
+    environment:
+      POSTGRES_DB: hello_django_dev
+      POSTGRES_USER: hello_django
+      POSTGRES_PASSWORD: hello_django
+    networks:
+      - laravel_face
+  # gpu_service:
+  #   image: nvidia/cuda:11.0.3-base-ubuntu20.04
+  #   runtime: nvidia
+  #   deploy:
+  #     resources:
+  #       reservations:
+  #         devices:
+  #           - capabilities: [gpu]
+  #   environment:
+  #     - NVIDIA_VISIBLE_DEVICES=all
+  #     - NVIDIA_DRIVER_CAPABILITIES=compute,utility
+  #   command: nvidia-smi
+  
+
+networks:
+  laravel_face:
+    external: True
+volumes:
+  postgres_data:
+  media_volume:

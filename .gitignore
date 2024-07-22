@@ -1,0 +1,15 @@
+.git
+/git
+/.git/*
+.vscode
+/.vscode/*
+/media/faces/*
+/media/id_card/*
+/media/images/*
+/media/new_test/*
+.env
+/core/__pycache__
+.db.sqlite3
+/core/model_files/best.pt
+/core/exp.py
+/core/model_files/arcface.onnx

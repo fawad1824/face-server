@@ -1,0 +1,49 @@
+body { background-color: #061124;font-family: 'Times New Roman'; font-size: 12pt; color: white}
+.title-big {
+  margin-top: 75.2pt;
+  margin-left: 3.75pt;
+  text-align: justify;
+  line-height: 50pt;
+  font-family: Calibri;
+  font-size: 41pt;
+  letter-spacing: 1.75pt;
+}
+.content-details {
+  margin-top: 72.3pt;
+  margin-right: 381pt;
+  line-height: 19.5pt;
+  font-family: Calibri;
+  font-size: 14pt;
+}
+.additional-details {
+  margin-top: 53.25pt;
+  margin-left: 77.25pt;
+  text-align: justify;
+  line-height: 13.4pt;
+  font-family: Calibri;
+  font-size: 11pt;
+}
+.cta-button {
+  padding: 10px 50px;
+  font-size: 14px;
+  background-color: #243552;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.left-section {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.right-section {
+  flex: 7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
